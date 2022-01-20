@@ -1,19 +1,46 @@
 ![BrightCoders Logo](img/logo-bc.png)
 
 # Nombre del proyecto
-Definan un nombre para su proyecto
+Seeker
 
 ## Problematica que atiende
-Describan la problemática que pretenden atender con su proyecto
+Favorece al autoempleo, auxiliar para promocionar tu perfil como prestador de servicios específicos y/o de oficio por medio de una red social.
+
 
 ## Propuesta de solución
-Describan de manera general las características de tu propuesta así como la forma en que atiende o resuelve la problemática que definieron.
+Desarrollar una red social para promocionar perfiles de personas que ofrecen servicios o muestran su perfil de oficio.
 
 ## Definición de requerimientos del MVP
 
 ### Requerimientos funcionales
+1- Cómo usuario de Seeker quiero poderme registrar en pocos pasos y datos.
+- Puedo registrarme usando sólo: Correo electrónico, password, nombre completo, fecha de nacimiento, género.
+- La contraseña deberá cumplir con un formato seguro.
+
+2- Como usuario de Seeker quiero poder editar mi perfil profesional y gestionar una colección de imágenes personales.
+
+3- Como usuario registrado de Seeker me gustaría poder visualizar el feed y perfiles.
+- Solo un usuario registrado puede  filtrar perfiles en el feed.
+
+4- Como usuario Seeker me gustaría poder filtrar los perfiles en el feed por medio de: 
+- Nombre
+- Oficio
+- Ubicación
+
+5- El Feed de Seeker debería mostrar al inicio  los últimos perfiles y fotografías creadas/registradas. 
+
 
 ### Requerimientos no funcionales
+- Calidad
+    - Garantizar la privacidad de los usuarios
+    - Diseño Intuitivo
+    - Tiempo de respuesta rápidos
+    - Diseño Responsivo 
+- Ejecución
+    - Utilizar Ruby on Rails
+    - Utilizar Bases de Datos (MySQL)
+    - Utilizar Heroku para deployment
+
 
 ## Diseño del MVP
 
