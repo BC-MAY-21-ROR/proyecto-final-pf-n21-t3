@@ -4,28 +4,46 @@
     text-align: center;
     .mid{
         display: grid;
-        margin: 0 auto;
-        grid-template-columns: 1fr 1fr;
-        max-width: 50rem;
+        font-family: $poppins;
         gap: 2rem;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+        max-width: 50rem;
         .login{
             background-color: $modal_color;
-            padding:1rem 0rem;
             border-radius: 5%;
+            padding:1rem 0rem;
+
             .input{
-                margin: 1rem 0rem;
+                background-color: $background_color;
                 border-radius: 5%;
+                font-size: 1.2rem;
+                height: 3.5rem;
+                margin-top: 2rem;
+                padding-left: 1rem;
+                width: 17rem;
             }
             .button{
                 background-color: $button_color;
-                padding: .5rem 6rem;
                 color: $color_white;
-                border-radius: 5%;
+                height: 3.5rem;
+                margin-top: 2rem;
+                width: 17rem;
+            }
+            .button__sigIn{
+                background-color: $feed_card;
+                color: $color_white;
+                height: 3.5rem;
+                margin-top: 2rem;
+                width: 17rem;
+            }
+            .forgot__yourPassword{
+                color: black;
             }
         }
         .Text {
-            display: grid;
             align-items: center;
+            display: grid;
             justify-content: center;
             padding: 1rem;
             div{
@@ -33,11 +51,7 @@
                     margin-bottom: 2rem;
                     text-align: left;
                 }
-                
-
             }
         }
     }
 }
-
-
