@@ -1,0 +1,64 @@
+.__content {
+  background-color: $background_color;
+  margin-top: 12.5%;
+  text-align: center;
+
+  .mid{
+    display: grid;
+    font-family: $poppins;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    max-width: 50rem;
+
+    .login{
+      background-color: $modal_color;
+      border-radius: 5%;
+      padding:1rem 0rem;
+
+      .input{
+        background-color: $background_color;
+        border-radius: 5%;
+        font-size: 1.2rem;
+        height: 3.5rem;
+        margin-top: 2rem;
+        padding-left: 1rem;
+        width: 17rem;
+      }
+
+      .button{
+        background-color: $button_color;
+        color: $color_white;
+        height: 3.5rem;
+        margin-top: 2rem;
+        width: 17rem;
+      }
+
+      .button__sigIn{
+        background-color: $feed_card;
+        color: $color_white;
+        height: 3.5rem;
+        margin-top: 2rem;
+        width: 17rem;
+      }
+
+      .forgot__yourPassword{
+        color: black;
+      }
+    }
+
+    .Text {
+      align-items: center;
+      display: grid;
+      justify-content: center;
+      padding: 1rem;
+
+      div{
+        p, h1{
+          margin-bottom: 2rem;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
