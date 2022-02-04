@@ -22,12 +22,14 @@
         display: grid;
         gap: 1rem;
       }
+
       &__label{
         color: $color_white;
         font-size: 2rem;
         text-align: left;
         padding-left: 0.25rem;
       }
+
       .input{
         background-color: $background_color;
         font-size: 2rem;
@@ -43,20 +45,29 @@
         font-size: 1.5rem;
         border: none;
       }
-      a{
+
+      .link-container{
+        margin-top: -1rem;
         .button__sigIn{
           background-color: $feed_card;
           color: $color_white;
           height: 3.5rem;
           font-size: 1.5rem;
           border: none;
-          width: 100%;
+          width: 60%;
         }
       }
 
       .forgot__yourPassword{
         color: $color_white;
         font-size: 1.3rem;
+      }
+      .sign{
+        background-color: $background_color;
+        height: 0.1rem;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: -1rem;
       }
     }
 
@@ -71,9 +82,11 @@
           margin-bottom: 2rem;
           text-align: left;
         }
+
         h1{
           font-size: 3rem;
         }
+
         p{
           font-size: 2rem;
         }
