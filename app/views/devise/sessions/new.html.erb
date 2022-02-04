@@ -4,11 +4,9 @@
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="login">
           <div>
-            <%= f.label :email, class: 'login__label' %>
             <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "input" %>
           </div>
           <div>
-            <%= f.label :password, class: 'login__label' %>
             <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "input" %>
           </div>
           <%= f.submit "Log in", class: "button"%>

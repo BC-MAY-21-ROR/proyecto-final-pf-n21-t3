@@ -1,74 +1,85 @@
-.signup-container{
+.signup-container {
   background-color: $background_color;
   margin-top: 6rem;
 }
-.form{
+
+.form {
   background-color: $modal_color;
-  max-width: 40rem;
-  margin: 0 auto;
-  padding: 2rem;
   border-radius: 1.5rem;
   display: grid;
   gap: 1rem;
-  &__header{
+  margin: 0 auto;
+  max-width: 40rem;
+  padding: 2rem;
+
+  &__header {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    a{
+
+    a {
+      color: $color_white;
       font-size: 3rem;
       text-decoration: none;
-      color: $color_white;
     }
   }
-  &__group{
+
+  &__group {
     display: grid;
     gap: 1rem;
-    .span{
-      font-size: 1.2rem;
-      color: $modal_color;
-    }
   }
-  &__group--gender{
+
+  &__group--gender {
     display: grid;
     grid-template-columns: 1fr 1.8fr;
-    select{
-      font-size: 1.5rem;
-      border: none;
-      padding: 0.5rem;
+
+    select {
       background-color: $background_color;
+      border: none;
+      font-size: 1.5rem;
+      padding: 0.5rem;
     }
   }
-  &__links{
+
+  &__links {
     display: grid;
     gap: 1rem;
+
     a {
-      input{
+      input {
         width: 100%;
       }
     }
-    .login{
+
+    .login {
       background-color: $button_color;
     }
-    .signup{
+
+    .signup {
       background-color: $button_sign_color;
     }
   }
-  &__label , &__tittle, &__button{
+
+  &__label , &__tittle, &__button {
     color: $color_white;
   }
-  &__label, &__button{
+
+  &__label, &__button {
     font-size: 2rem;
   }
-  &__tittle{
+
+  &__tittle {
     font-size: 3rem;
   }
-  &__input{
+
+  &__input {
+    background-color: $background_color;
     border: none;
     font-size: 1.5rem;
     padding: 0.5rem;
-    background-color: $background_color;
   }
-  &__button{
+
+  &__button {
     border: none;
     padding: 0.5rem;
   }
