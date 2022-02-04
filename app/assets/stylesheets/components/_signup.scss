@@ -1,6 +1,10 @@
+.signup-container{
+  background-color: $background_color;
+  margin-top: 6rem;
+}
 .form{
   background-color: $modal_color;
-  width: 40rem;
+  max-width: 40rem;
   margin: 0 auto;
   padding: 2rem;
   border-radius: 1.5rem;
@@ -31,7 +35,7 @@
       font-size: 1.5rem;
       border: none;
       padding: 0.5rem;
-      background-color: $color_white;
+      background-color: $background_color;
     }
   }
   &__links{
@@ -62,6 +66,7 @@
     border: none;
     font-size: 1.5rem;
     padding: 0.5rem;
+    background-color: $background_color;
   }
   &__button{
     border: none;
