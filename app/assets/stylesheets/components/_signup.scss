@@ -1,0 +1,86 @@
+.signup-container {
+  background-color: $background_color;
+  margin-top: 6rem;
+}
+
+.form {
+  background-color: $modal_color;
+  border-radius: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 40rem;
+  padding: 2rem;
+
+  &__header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      color: $color_white;
+      font-size: 3rem;
+      text-decoration: none;
+    }
+  }
+
+  &__group {
+    display: grid;
+    gap: 1rem;
+  }
+
+  &__group-gender {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+
+    select {
+      background-color: $background_color;
+      border: none;
+      font-size: 1.5rem;
+      padding: 0.5rem;
+    }
+  }
+
+  &__links {
+    display: grid;
+    gap: 1rem;
+
+    a {
+      input {
+        width: 100%;
+      }
+    }
+
+    .login {
+      background-color: $button_color;
+    }
+
+    .signup {
+      background-color: $button_sign_color;
+    }
+  }
+
+  &__label , &__tittle, &__button {
+    color: $color_white;
+  }
+
+  &__label, &__button {
+    font-size: 2rem;
+  }
+
+  &__tittle {
+    font-size: 3rem;
+  }
+
+  &__input {
+    background-color: $background_color;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  &__button {
+    border: none;
+    padding: 0.5rem;
+  }
+}

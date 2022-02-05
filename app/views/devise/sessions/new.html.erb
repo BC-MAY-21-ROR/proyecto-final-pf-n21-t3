@@ -1,27 +1,21 @@
 <div class="__content">
   <div class= "mid">
-    <div class="login">
 
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="field">
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "input" %>
-        </div>
-
-        <div class="field">
-          <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "input" %>
-        </div>
-
-        <div class="actions">
+        <div class="login">
+          <div>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "input" %>
+          </div>
+          <div>
+            <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "input" %>
+          </div>
           <%= f.submit "Log in", class: "button"%>
-        </div>
-
-        <%= link_to "Forgot your password?", new_password_path(resource_name), class: "forgot__yourPassword" %>
-        <div class="actions">
-          <%= link_to '<input class="button__sigIn" type="button" value="Create new account">'.html_safe, new_registration_path(resource_name)%>
+          <%= link_to "Forgot your password?", new_password_path(resource_name), class: "forgot-password" %>
+          <div class='sign'></div>
+          <%= link_to '<input class="b-sign-up" type="button" value="Create new account">'.html_safe, new_registration_path(resource_name), class: "link-container"%>
         </div>
       <% end %>
 
-    </div>
     <div class = "Text">
       <div>
         <h1>Seeker</h1>
