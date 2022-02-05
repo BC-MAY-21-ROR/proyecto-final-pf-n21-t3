@@ -2,7 +2,8 @@
 @import "./base/variables.scss";
 @import "./components/login";
 @import "./components/signup";
- html, body {
+
+body {
   background-color: $background_color;
   font-family: $poppins;
   margin: 0;
@@ -10,6 +11,7 @@
 }
 
 html {
+  @extend body;
   font-size: 62.5%;
   box-sizing: border-box;
   scroll-padding-top: 0rem;

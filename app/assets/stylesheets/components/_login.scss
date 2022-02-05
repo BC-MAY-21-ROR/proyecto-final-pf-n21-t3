@@ -2,7 +2,7 @@
   background-color: $background_color;
   margin-top: 12.5%;
 
-  .mid{
+  .mid {
     display: grid;
     font-family: $poppins;
     gap: 3rem;
@@ -11,19 +11,19 @@
     max-width: 80rem;
     text-align: center;
 
-    .login{
+    .login {
       background-color: $modal_color;
       border-radius: 1.5rem;
       display: grid;
       gap: 2rem;
       padding: 2rem;
 
-      div{
+      div {
         display: grid;
         gap: 1rem;
       }
 
-      .input{
+      .input {
         background-color: $background_color;
         border: none;
         font-size: 2rem;
@@ -31,7 +31,7 @@
         padding-left: 1rem;
       }
 
-      .button{
+      .button {
         background-color: $button_color;
         border: none;
         color: $color_white;
@@ -39,9 +39,10 @@
         height: 3.5rem;
       }
 
-      .link-container{
+      .link-container {
         margin-top: -0.5rem;
-        .button__sigIn{
+
+        .b-sign-up {
           background-color: $feed_card;
           border: none;
           color: $color_white;
@@ -51,11 +52,12 @@
         }
       }
 
-      .forgot__yourPassword{
+      .forgot-password {
         color: $color_white;
         font-size: 1.3rem;
       }
-      .sign{
+
+      .sign {
         background-color: $background_color;
         height: 0.1rem;
         margin-top: -0.5rem;
@@ -70,17 +72,16 @@
       justify-content: center;
       padding: 1rem;
 
-      div{
-        p, h1{
+      div {
+
+        h1 {
           margin-bottom: 2rem;
           text-align: left;
-        }
-
-        h1{
           font-size: 3rem;
         }
 
-        p{
+        p {
+          @extend h1;
           font-size: 2rem;
         }
       }
