@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'feeds#index'
+  root to: 'profiles#index'
   devise_for :users
 
   devise_scope :user do
@@ -9,4 +9,6 @@ Rails.application.routes.draw do
     get 'users/sign_up'  => 'devise/registrations#new'
     get 'users/edit_profile' => 'devise/registrations#edit'
   end
+
+  resources :profiles
 end
