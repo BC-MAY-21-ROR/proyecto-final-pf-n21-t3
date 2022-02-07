@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_03_052500) do
+ActiveRecord::Schema.define(version: 2022_02_07_185728) do
 
   create_table "profiles", force: :cascade do |t|
     t.string "phone_num"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2022_02_03_052500) do
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "visible"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
@@ -54,7 +55,6 @@ ActiveRecord::Schema.define(version: 2022_02_03_052500) do
     t.string "name"
     t.date "birthday"
     t.string "gender"
-    t.string "last_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
