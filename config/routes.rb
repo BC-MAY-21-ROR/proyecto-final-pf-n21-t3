@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'feeds#index'
+  root to: 'profiles#index'
   devise_for :users
 
   devise_scope :user do
