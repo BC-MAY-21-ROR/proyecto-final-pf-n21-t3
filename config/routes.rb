@@ -9,4 +9,6 @@ Rails.application.routes.draw do
     get 'users/sign_up'  => 'devise/registrations#new'
     get 'users/edit_profile' => 'devise/registrations#edit'
   end
+
+  resources :profiles
 end
