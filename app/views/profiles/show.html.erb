@@ -1,0 +1,15 @@
+<%= link_to 'Back', profiles_path%>
+<h2> <%= @user.name %> </h2>
+<div>
+  <h3>Who Am I?</h3>
+  <p> <%= @profile.description %> </p>
+</div>
+<div>
+  <h3>Where am I from?</h3>
+  <p> <%= @profile.city %>, <%= @profile.state %>, <%= @profile.country %> </p>
+</div>
+<div>
+  <h3>Contact me</h3>
+  <p> <%= @profile.phone_num %> </p>
+  <p> <%= @user.email %> </p>
+</div>
