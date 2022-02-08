@@ -1,2 +1,11 @@
 <h1>profiles#feed</h1>
 <p>Find me in app/views/pages/feed.html.erb</p>
+
+
+<p> <%= @currentUser.id %> </p>
+<p> <%= @currentUser.name %> </p>
+<% if @profile.nil? %>
+  <%= link_to 'Crear Perfil', new_profile_path%>
+  <% else %>
+  <%= link_to 'Crear Perfil', edit_profile_path(@currentUser.id)%>
+<% end %>

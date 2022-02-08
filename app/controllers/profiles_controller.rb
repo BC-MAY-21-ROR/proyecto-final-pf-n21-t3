@@ -3,6 +3,8 @@ class ProfilesController < ApplicationController
   end
 
   def index
+    @currentUser = current_user
+    @profile = Profile.find_by(id: current_user.id)
   end
 
   def new
