@@ -10,6 +10,6 @@ Rails.application.routes.draw do
     get 'users/edit_profile' => 'devise/registrations#edit'
   end
 
-  resources :profiles
-  resources :skills
+  resources :profiles, only: [:edit, :update, :show, :new, :create, :index]
+  resources :skills, only: [ :new, :create, :destroy]
 end
