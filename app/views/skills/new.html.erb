@@ -1,0 +1,18 @@
+<%= link_to 'Back', profiles_path%>
+<h2> Add a new Skill <span><%= current_user.name%></span> </h2>
+<%= form_with scope: :skill, url: skills_path, local:true do |f|%>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <%= f.submit %>
+<% end %>
+
+<% if @skill.errors.any? %>
+  <h3> The following errors prevented the Skill from being saved</h3>
+  <ul>
+  <% @skill.errors.full_messages.each do |msg|%>
+    <li><span><%= msg %></span></li>
+  <% end %>
+  </ul>
+<% end %>
