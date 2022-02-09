@@ -2,7 +2,7 @@
 <p>Find me in app/views/pages/feed.html.erb</p>
 
 <% if @profile.nil? %>
-  <%= link_to @currentUser.name, new_profile_path%>
+  <%= link_to current_user.name, new_profile_path%>
   <% else %>
-  <%= link_to @currentUser.name, profile_path(@currentUser.id)%>
+  <%= link_to current_user.name, profile_path(current_user.id)%>
 <% end %>

@@ -13,3 +13,6 @@
   <p> <%= @profile.phone_num %> </p>
   <p> <%= @user.email %> </p>
 </div>
+<% if current_user.id == @user.id %>
+  <%= link_to 'Edit', edit_profile_path(current_user.id)%>
+<% end %>

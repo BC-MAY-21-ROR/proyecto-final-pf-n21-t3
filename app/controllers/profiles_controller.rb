@@ -5,7 +5,6 @@ class ProfilesController < ApplicationController
   end
 
   def index
-    @currentUser = current_user
     @profile = Profile.find_by(user_id: current_user.id)
   end
 
@@ -18,16 +17,23 @@ class ProfilesController < ApplicationController
     hash[:user_id] = current_user.id
     @profile = Profile.new(hash)
     if @profile.save
-      redirect_to profiles_path
+      redirect_to profile_path(@profile.user_id)
     else
       render 'new'
     end
   end
 
   def edit
+    @profile = Profile.find_by(user_id: params[:id])
   end
 
   def update
+    @profile = Profile.find_by(user_id: current_user.id)
+    if @profile.update(params.require(:profile).permit(:description, :city, :state, :country, :phone_num, :visible))
+      redirect_to profile_path(@profile.user_id)
+    else
+      render 'edit'
+    end
   end
 
   def destroy
