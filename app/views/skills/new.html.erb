@@ -1,4 +1,4 @@
-<%= link_to 'Back', profiles_path%>
+<%= link_to 'Back', profile_path(current_user.id)%>
 <h2> Add a new Skill <span><%= current_user.name%></span> </h2>
 <%= form_with scope: :skill, url: skills_path, local:true do |f|%>
   <div>
