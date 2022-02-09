@@ -26,6 +26,9 @@
 		input {
 			background-color: $background_color;
 		}
+		.input_search{
+			width: 50%;
+		}
 
 		select {
 			@extend input;
