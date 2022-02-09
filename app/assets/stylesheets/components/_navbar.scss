@@ -1,0 +1,34 @@
+.header-nav {
+	padding-left: 1rem;
+	align-content: center;
+	background-color: $header_color;
+
+	.bar{
+		font-size: 2rem;
+		display: flex;
+		padding: 1.5rem;
+		gap: 1rem;
+
+		.tittle{
+			font-size: 3rem;
+		}
+
+		.logout{
+			font-size: 2.5rem;
+			margin-left: auto;
+		}
+
+		a{
+			text-decoration: none;
+			color: $color_white;
+		}
+
+		input {
+			background-color: $background_color;
+		}
+
+		select {
+			@extend input;
+		}
+	}
+}

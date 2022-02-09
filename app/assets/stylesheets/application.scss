@@ -2,6 +2,7 @@
 @import "./base/variables.scss";
 @import "./components/login";
 @import "./components/signup";
+@import "./components/navbar";
 
 body {
   background-color: $background_color;
@@ -20,4 +21,10 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+.contenedor {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
 }

@@ -1,12 +1,13 @@
-<nav class="navbar navbar-light bg-light">
-  <li class="nav-item active">
-  <%= form_with scope: :search, url: profiles_path, local:true do |f|%>
-    <div>
-      <%= link_to 'Seeker', profiles_path, class: 'navbar-link' %>
-      <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
-      <%= f.select(:option, options_for_select([["Job","skill"],["People","name"]])) %>
-      <%= f.submit "Search", class: "button"%>
-      <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'navbar-link'  %>
-    </div>
-  <% end %>
+<nav class="header-nav">
+  <div class="container">
+    <%= form_with scope: :search, url: profiles_path, local:true do |f|%>
+      <div class='bar'>
+        <%= link_to 'Seeker', profiles_path, class: 'tittle' %>
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'input_search'%>
+        <%= f.select(:option, options_for_select([["Job","skill"],["People","name"]])) %>
+        <%= f.submit "Search"%>
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'logout'  %>
+      </div>
+    <% end %>
+  </div>
 </nav>
