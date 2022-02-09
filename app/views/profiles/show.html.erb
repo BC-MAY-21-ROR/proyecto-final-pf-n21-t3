@@ -6,7 +6,7 @@
 <h1>Skills <%= @user.name %> </h1>
 <% @skills.each do |skill|%>
   <div>
-    <p> <%= skill.name %> </p>
+    <p> <%= skill.name %> <%= link_to 'X', skill_path(skill), method: :delete ,data: {confirm: "Are you sure ?"}%></p> 
   </div>
 <% end %>
 <% if current_user.id == @user.id %>
