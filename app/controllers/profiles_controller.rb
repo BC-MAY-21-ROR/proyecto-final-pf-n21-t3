@@ -37,10 +37,4 @@ class ProfilesController < ApplicationController
       render 'edit'
     end
   end
-
-  def destroy
-  end
-
-  def search
-  end
 end
