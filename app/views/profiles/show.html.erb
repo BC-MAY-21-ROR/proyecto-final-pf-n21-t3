@@ -1,0 +1,5 @@
+<%= link_to 'Back', profiles_path%>
+<%= render 'about' %>
+<% if current_user.id == @user.id %>
+  <%= link_to 'Edit', edit_profile_path(current_user.id)%>
+<% end %>
