@@ -3,3 +3,10 @@
 <% if current_user.id == @user.id %>
   <%= link_to 'Edit', edit_profile_path(current_user.id)%>
 <% end %>
+<% if !@skills.empty? %>
+  <%= render 'skills' %>
+<% else %>
+  <% if current_user.id == @user.id %>
+    <h2><%= link_to "Add your first Skill #{ current_user.name }", new_skill_path(current_user.id)%> </h1>
+  <% end %>
+<% end %>

@@ -2,6 +2,7 @@ class ProfilesController < ApplicationController
   def show
     @profile = Profile.find_by(user_id: params[:id])
     @user = User.find_by(id: @profile.user_id)
+    @skills = Skill.where(user_id: params[:id])
   end
 
   def index
