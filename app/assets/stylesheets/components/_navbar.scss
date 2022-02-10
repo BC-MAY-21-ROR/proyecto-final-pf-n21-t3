@@ -23,12 +23,25 @@
 			color: $color_white;
 		}
 
-		input {
+		.input_search{
+			width: 50rem;
+			margin-left: 3rem;
 			background-color: $background_color;
 		}
 
 		select {
-			@extend input;
+			@extend .input_search;
+			width: 9rem;
+		}
+
+		.button_search {
+			@extend .input_search;
+			width: 7rem;
+			background: url(search.svg);
+			background-repeat: no-repeat;
+			background-color: $background_color;
+			background-position: center center;
+			background-size: 3.5rem;
 		}
 	}
 }
