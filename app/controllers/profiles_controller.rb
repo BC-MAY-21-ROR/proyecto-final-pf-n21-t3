@@ -39,4 +39,7 @@ class ProfilesController < ApplicationController
 
   def destroy
   end
+
+  def search
+  end
 end
