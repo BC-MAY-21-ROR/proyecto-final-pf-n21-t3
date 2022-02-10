@@ -12,4 +12,5 @@ Rails.application.routes.draw do
 
   resources :profiles, only: [:edit, :update, :show, :new, :create, :index]
   resources :skills, only: [ :new, :create, :destroy]
+  resources :social_networks, only: [:edit, :update, :new, :create]
 end
