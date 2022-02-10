@@ -36,11 +36,11 @@
 
 		.button_search {
 			@extend .input_search;
+			background: url(search.svg);
 			background-color: $background_color;
 			background-position: center center;
 			background-repeat: no-repeat;
 			background-size: 3.5rem;
-			background: url(search.svg);
 			width: 7rem;
 		}
 	}
