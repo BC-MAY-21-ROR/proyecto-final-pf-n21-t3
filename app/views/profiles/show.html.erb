@@ -10,3 +10,14 @@
     <h2><%= link_to "Add your first Skill #{ current_user.name }", new_skill_path(current_user.id)%> </h1>
   <% end %>
 <% end %>
+
+<% if !@social_network.nil? %>
+  <h1>Social networks <%= @user.name %> </h1>
+  <% if current_user.id == @user.id %>
+    <%= link_to 'update', edit_social_network_path(current_user.id)%>
+  <% end %>-
+<% else %>
+  <% if current_user.id == @user.id %>
+    <h2><%= link_to "Add your Social networks #{ current_user.name }", new_social_network_path(current_user.id)%> </h1>
+  <% end %>
+<% end %>

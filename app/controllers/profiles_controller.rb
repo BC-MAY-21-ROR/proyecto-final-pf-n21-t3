@@ -3,6 +3,7 @@ class ProfilesController < ApplicationController
     @profile = Profile.find_by(user_id: params[:id])
     @user = User.find_by(id: @profile.user_id)
     @skills = Skill.where(user_id: params[:id])
+    @social_network = SocialNetwork.find_by(user_id: params[:id])
   end
 
   def index

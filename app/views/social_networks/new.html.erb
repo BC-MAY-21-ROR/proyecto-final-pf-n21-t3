@@ -1,0 +1,21 @@
+<%= link_to 'Back', profile_path(current_user.id)%>
+<h2> Add a your Social networks <span><%= current_user.name%></span> </h2>
+<%= form_with scope: :social_network, url: social_networks_path, local:true do |f|%>
+  <div>
+    <%= f.label :Facebook %>
+    <%= f.text_field :Facebook %>
+  </div>
+  <div>
+    <%= f.label :twitter %>
+    <%= f.text_field :twitter %>
+  </div>
+  <div>
+    <%= f.label :LinkendIn %>
+    <%= f.text_field :LinkendIn %>
+  </div>
+  <div>
+    <%= f.label :Instagram %>
+    <%= f.text_field :Instagram %>
+  </div>
+  <%= f.submit %>
+<% end %>
