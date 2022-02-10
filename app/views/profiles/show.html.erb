@@ -12,12 +12,28 @@
 <% end %>
 
 <% if !@social_network.nil? %>
-  <h1>Social networks <%= @user.name %> </h1>
-  <% if current_user.id == @user.id %>
-    <%= link_to 'update', edit_social_network_path(current_user.id)%>
-  <% end %>-
+  <% if @social_network.twitter == "" and @social_network.Facebook == "" and @social_network.Instagram == "" and @social_network.LinkendIn == "" %>
+    <h2><%= link_to "Add your Social networks #{ current_user.name }", edit_social_network_path(current_user.id)%> </h2>
+  <% else %>
+    <h1>Social networks <%= @user.name %> </h1>
+    <% if @social_network.twitter != "" %>
+      <%= link_to 'twitter', @social_network.twitter, target: "_blank" %>
+    <% end %>
+    <% if @social_network.Facebook != "" %>
+      <%= link_to 'Facebook', @social_network.Facebook, target: "_blank" %>
+    <% end %>
+    <% if @social_network.Instagram != "" %>
+      <%= link_to 'Instagram', @social_network.Instagram, target: "_blank" %>
+    <% end %>
+    <% if @social_network.LinkendIn != "" %>
+      <%= link_to 'LinkendIn', @social_network.LinkendIn, target: "_blank" %>
+    <% end %>
+    <% if current_user.id == @user.id %>
+      <%= link_to 'update', edit_social_network_path(current_user.id)%>
+    <% end %>
+  <% end %>
 <% else %>
   <% if current_user.id == @user.id %>
-    <h2><%= link_to "Add your Social networks #{ current_user.name }", new_social_network_path(current_user.id)%> </h1>
+    <h2><%= link_to "Add your Social networks #{ current_user.name }", new_social_network_path(current_user.id)%> </h2>
   <% end %>
 <% end %>
