@@ -1,13 +1,13 @@
 .header-nav {
-	padding-left: 1rem;
 	align-content: center;
 	background-color: $header_color;
+	padding-left: 1rem;
 
 	.bar{
-		font-size: 2rem;
 		display: flex;
-		padding: 1.5rem;
+		font-size: 2rem;
 		gap: 1rem;
+		padding: 1.5rem;
 
 		.tittle{
 			font-size: 3rem;
@@ -19,14 +19,14 @@
 		}
 
 		a{
-			text-decoration: none;
 			color: $color_white;
+			text-decoration: none;
 		}
 
 		.input_search{
-			width: 50%;
-			margin-left: 3rem;
 			background-color: $background_color;
+			margin-left: 3rem;
+			width: 50%;
 		}
 
 		select {
@@ -36,12 +36,12 @@
 
 		.button_search {
 			@extend .input_search;
-			width: 7rem;
-			background: url(search.svg);
-			background-repeat: no-repeat;
 			background-color: $background_color;
 			background-position: center center;
+			background-repeat: no-repeat;
 			background-size: 3.5rem;
+			background: url(search.svg);
+			width: 7rem;
 		}
 	}
 }
