@@ -17,7 +17,7 @@ class SkillsController < ApplicationController
   def destroy
     @skill = Skill.find(params[:id])
     link = @skill.user_id
-    @skill.destroy
+    @skill.delete
     redirect_to profile_path(link)
   end
 end

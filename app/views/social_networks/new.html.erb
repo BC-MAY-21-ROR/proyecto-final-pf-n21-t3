@@ -2,20 +2,21 @@
 <h2> Add a your Social networks <span><%= current_user.name%></span> </h2>
 <%= form_with scope: :social_network, url: social_networks_path, local:true do |f|%>
   <div>
-    <%= f.label :Facebook %>
-    <%= f.text_field :Facebook %>
+    <%= f.label :url %>
+    <%= f.text_field :url %>
   </div>
   <div>
-    <%= f.label :twitter %>
-    <%= f.text_field :twitter %>
-  </div>
-  <div>
-    <%= f.label :LinkendIn %>
-    <%= f.text_field :LinkendIn %>
-  </div>
-  <div>
-    <%= f.label :Instagram %>
-    <%= f.text_field :Instagram %>
+    <%= f.label :network %>
+    <%= f.select(:network, options_for_select([["Facebook"],["Instagram"],["LinkdIn"],["Twitter"]])) %>
   </div>
   <%= f.submit %>
+<% end %>
+
+<% if @social_network.errors.any? %>
+  <h3> The following errors prevented the social network from being saved</h3>
+  <ul>
+  <% @social_network.errors.full_messages.each do |msg|%>
+    <li><span><%= msg %></span></li>
+  <% end %>
+  </ul>
 <% end %>
