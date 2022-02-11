@@ -1,12 +1,11 @@
 .header-nav {
   align-content: center;
   background-color: $header_color;
-  padding-left: 1rem;
 
   .bar {
     display: flex;
     font-size: 2rem;
-    gap: 1rem;
+    justify-content: space-between;
     padding: 1.5rem;
 
     .tittle {
@@ -15,7 +14,6 @@
 
     .logout {
       font-size: 2.5rem;
-      margin-left: auto;
     }
 
     a {
@@ -23,15 +21,26 @@
       text-decoration: none;
     }
 
+    .flex{
+      display: flex;
+      gap: 3rem;
+    }
+    .div{
+      display: grid;
+      grid-template-columns: 4fr 2fr 1fr;
+      gap: 0.1rem;
+    }
+
     .input_search {
       background-color: $background_color;
-      margin-left: 3rem;
-      width: 50%;
+      border-style: none;
+      border: 1px solid $header_color;
     }
 
     select {
       @extend .input_search;
-      width: 9rem;
+      border-style: none;
+      border: 1px solid $header_color;
     }
 
     .button_search {
@@ -40,8 +49,9 @@
       background-color: $background_color;
       background-position: center center;
       background-repeat: no-repeat;
-      background-size: 3.5rem;
-      width: 7rem;
+      background-size: 3rem;
+      border-style: none;
+      border: 1px solid $header_color;
     }
   }
 }

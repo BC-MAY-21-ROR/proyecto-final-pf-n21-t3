@@ -3,6 +3,7 @@ class ProfilesController < ApplicationController
     @profile = Profile.find_by(user_id: params[:id])
     @user = User.find_by(id: @profile.user_id)
     @skills = Skill.where(user_id: params[:id])
+    @social_network = SocialNetwork.where(user_id: params[:id])
   end
 
   def index
@@ -35,11 +36,5 @@ class ProfilesController < ApplicationController
     else
       render 'edit'
     end
-  end
-
-  def destroy
-  end
-
-  def search
   end
 end

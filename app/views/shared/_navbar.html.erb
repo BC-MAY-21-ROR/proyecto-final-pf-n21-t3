@@ -3,10 +3,14 @@
     <%= form_with scope: :search, url: profiles_path, local:true do |f|%>
       <div class='bar'>
         <%= link_to 'Seeker', profiles_path, class: 'tittle' %>
-        <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'input_search'%>
-        <%= f.select(:option, options_for_select([["Job","skill"],["People","name"]])) %>
-        <%= f.submit "", class:"button_search"%>
-        <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'logout'  %>
+        <div class='flex'>
+          <div class='div'>
+            <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'input_search'%>
+            <%= f.select(:option, options_for_select([["Job","skill"],["People","name"]])) %>
+            <%= f.submit "", class:"button_search"%>
+          </div>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'logout'  %>
+        </div>
       </div>
     <% end %>
   </div>
