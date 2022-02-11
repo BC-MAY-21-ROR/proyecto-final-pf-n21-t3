@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_10_235326) do
+ActiveRecord::Schema.define(version: 2022_02_11_010810) do
 
   create_table "profiles", force: :cascade do |t|
     t.string "phone_num"
