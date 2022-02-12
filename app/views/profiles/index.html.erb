@@ -1,13 +1,18 @@
-<h1>profiles#feed</h1>
-<p>Find me in app/views/pages/feed.html.erb</p>
 <aside>
   <% if @profile.nil? %>
-    <%= link_to current_user.name, new_profile_path%>
+    <h3> <%= link_to current_user.name, new_profile_path %> </h3>
+  <% else %>
+    <h3> <%= link_to current_user.name, profile_path(current_user.id) %> </h3>
+    <% skill = Skill.find_by(user_id: current_user.id ) %>
+    <% if !skill.nil? %>
+      <h4> <%= skill.name %> </h4>
     <% else %>
-    <%= link_to current_user.name, profile_path(current_user.id)%>
+      <h4> <%= link_to "Add skill", new_skill_path(current_user.id) %> </h4>
+    <% end %>
   <% end %>
 </aside>
 <main><br>
+  <h2>Profiles</h2>
   <% @profiles.each do |profile| %>
     <% user = User.find_by(id: profile.user_id) %>
     <% skill = Skill.find_by(user_id: user.id) %>
