@@ -7,8 +7,14 @@ class ProfilesController < ApplicationController
   end
 
   def index
+    name = params[:name]
+    option = params[:option]
     @profile = Profile.find_by(user_id: current_user.id)
-    @profiles = Profile.where.not(user_id: current_user.id).where(visible: true)
+    if name.blank?
+      @profiles = Profile.where.not(user_id: current_user.id).where(visible: true)
+    # else
+      # find(name, option)
+    end
   end
 
   def new
