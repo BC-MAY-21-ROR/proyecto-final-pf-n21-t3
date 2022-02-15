@@ -3,6 +3,7 @@
 @import "./components/login";
 @import "./components/signup";
 @import "./components/navbar";
+@import "./components/feed";
 
 body {
   background-color: $background_color;
@@ -27,4 +28,8 @@ html {
   margin: 0 auto;
   max-width: 140rem;
   width: 95%;
+}
+
+.main{
+  background-color: $background_color;
 }
