@@ -1,0 +1,106 @@
+.feed {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 4fr;
+
+  .user {
+    background-color: $feed_card;
+    display: grid;
+    padding: 1rem;
+
+    &__img {
+      width: 100%;
+    }
+
+    &__name {
+      margin-top: 1rem;
+      margin: 0;
+      text-align: center;
+    }
+
+    &__skill {
+      @extend .user__name;
+      margin-top: 0.5rem;
+    }
+
+    a {
+      color: $color_black;
+      margin-top: 0.5rem;
+      text-decoration: none;
+    }
+    a:hover {
+      color: $color_white;
+    }
+  }
+
+  .profile {
+    background-color: $feed_card;
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 2.5rem;
+
+    &__top {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .line {
+      align-items: end;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &__img {
+      height: 8rem;
+      width: 8rem;
+    }
+
+    &__name {
+      @extend .margin-0;
+      font-size: 2.2rem;
+
+      a {
+        color: $color_black;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: $color_white;
+      }
+    }
+
+    &__city {
+      @extend .margin-0;
+      font-size: 1.5rem;
+    }
+
+    &__date {
+      @extend .profile__city;
+    }
+
+    &__skill {
+      @extend .margin-0;
+      font-size: 1.8rem;
+    }
+
+    &__description {
+      @extend .margin-0;
+      font-size: 1.3rem;
+      text-align: justify;
+    }
+
+    .margin-0 {
+      margin: 0;
+    }
+  }
+}
