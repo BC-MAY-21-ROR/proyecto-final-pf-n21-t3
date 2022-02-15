@@ -12,9 +12,22 @@ class ProfilesController < ApplicationController
     @profile = Profile.find_by(user_id: current_user.id)
     if name.blank?
       @profiles = Profile.where.not(user_id: current_user.id).where(visible: true)
-    # else
-      # find(name, option)
+    else
+      id = find(name, option)
+      @profiles = Profile.where.not(user_id: current_user.id).where(user_id: id)
     end
+    render 'index'
+  end
+
+  def find(name, option)
+    if option == 'name'
+      names = User.where("name LIKE :prefix", prefix: "%#{name}%")
+      id = names.map(&:id)
+    else
+      skills = Skill.where("name LIKE :prefix", prefix: "%#{name}%")
+      id = skills.map(&:user_id)
+    end
+    id
   end
 
   def new
