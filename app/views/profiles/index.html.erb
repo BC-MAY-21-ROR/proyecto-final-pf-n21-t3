@@ -1,18 +1,20 @@
 <div class="container">
   <div class="feed">
-    <aside class="user">
-      <%= image_tag 'profile', class: 'user__img' %>
-      <% if @profile.nil? %>
-        <h3 class="user__name" > <%= link_to current_user.name, new_profile_path %> </h3>
-      <% else %>
-        <h3 class="user__name"> <%= link_to current_user.name, profile_path(current_user.id) %> </h3>
-        <% skill = Skill.find_by(user_id: current_user.id ) %>
-        <% if !skill.nil? %>
-          <h4 class="user__skill" > <%= skill.name %> </h4>
+    <aside>
+      <div class="user">
+        <%= image_tag 'profile', class: 'user__img' %>
+        <% if @profile.nil? %>
+          <h3 class="user__name" > <%= link_to current_user.name, new_profile_path %> </h3>
         <% else %>
-          <h4 class="user__skill"> <%= link_to "Add skill", new_skill_path(current_user.id) %> </h4>
+          <h3 class="user__name"> <%= link_to current_user.name, profile_path(current_user.id) %> </h3>
+          <% skill = Skill.find_by(user_id: current_user.id ) %>
+          <% if !skill.nil? %>
+            <h4 class="user__skill" > <%= skill.name %> </h4>
+          <% else %>
+            <h4 class="user__skill"> <%= link_to "Add skill", new_skill_path(current_user.id) %> </h4>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
     </aside>
 
     <main>
@@ -21,17 +23,22 @@
           <div class="profile">
             <% user = User.find_by(id: profile.user_id) %>
             <% skill = Skill.find_by(user_id: user.id) %>
-            <div>
-              <h4 class="profile__name" > <%= link_to user.name, profile_path(user.id)%> </h4>
-              <h5 class="profile__city" > <%= profile.city %>, <%= profile.state %>, <%= profile.country %> </h5>
+            <div class="profile__top">
+              <%= image_tag 'profile', class: 'profile__img' %>
+              <div class="profile__info">
+                <div class="line">
+                  <h4 class="profile__name" > <%= link_to user.name, profile_path(user.id)%> </h4>
+                  <h5 class="profile__city" > <%= profile.city.capitalize %>, <%= profile.state.capitalize %>, <%= profile.country.capitalize %> </h5>
+                </div>
+                <div class="line">
+                  <% if !skill.nil? %>
+                    <h5 class="profile__skill" > <%= skill.name %> </h5>
+                  <% end %>
+                  <h5 class="profile__date"> <%=  user.birthday.strftime("%m-%d-%Y") %> </h5>
+                </div>
+              </div>
             </div>
-            <div>
-              <% if !skill.nil? %>
-                <h5 class="profile__skill" > <%= skill.name %> </h5>
-              <% end %>
-              <h5> <%=  user.birthday.strftime("%m-%d-%Y") %> </h5>
-            </div>
-              <p class="profile__description" > <%= profile.description %> </p>
+            <p class="profile__description" > <%= profile.description %> </p>
           </div>
         <% end %>
       <% else %>

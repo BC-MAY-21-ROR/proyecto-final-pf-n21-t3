@@ -7,9 +7,6 @@
     background-color: $feed_card;
     padding: 1rem;
     display: grid;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
 
     &__img{
       width: 100%;
@@ -17,10 +14,12 @@
 
     &__name{
       margin: 0;
+      margin-top: 1rem;
       text-align: center;
     }
     &__skill{
-      @extend .user__name
+      @extend .user__name;
+      margin-top: 0.5rem;
     }
 
     a{
@@ -36,17 +35,68 @@
   .profile{
     background-color: $feed_card;
     display: grid;
+    padding: 2.5rem;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+
+    &__top{
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    &__info{
+      width: 100%;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .line{
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      width: 100%;
+    }
+
+    &__img{
+      width: 8rem;
+      height: 8rem;
+    }
 
     &__name{
-      
+      font-size: 2.2rem;
+      a{
+        color: $color_black;
+        text-decoration: none;
+      }
+      a:hover{
+        color: $color_white;
+      }
+      @extend .margin-0;
     }
 
     &__city{
-      
+      font-size: 1.5rem;
+      @extend .margin-0;
+    }
+
+    &__date{
+      @extend .profile__city
+    }
+
+    &__skill{
+      font-size: 1.8rem;
+      @extend .margin-0;
     }
 
     &__description{
-      
+      text-align: justify;
+      font-size: 1.3rem;
+      @extend .margin-0;
+    }
+    .margin-0{
+      margin: 0;
     }
   }
 }
