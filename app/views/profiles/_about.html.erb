@@ -1,14 +1,22 @@
-<h2> <%= @user.name %> </h2>
-<div>
-  <h3>Who Am I?</h3>
-  <p> <%= @profile.description %> </p>
-</div>
-<div>
-  <h3>Where am I from?</h3>
-  <p> <%= @profile.city %>, <%= @profile.state %>, <%= @profile.country %> </p>
-</div>
-<div>
-  <h3>Contact me</h3>
-  <p> <%= @profile.phone_num %> </p>
-  <p> <%= @user.email %> </p>
+<div class="profile__top">
+  <div>
+    <%= image_tag "profile", class: "profile__img"%>
+    <p class="profile__age"> <%= @user.birthday.strftime("%m-%d-%Y") %> </p>
+  </div>
+  <div>
+    <h2 class="profile__name"> <%= @user.name %> </h2>
+    <div>
+      <h3 class="profile__tittle">Who Am I?</h3>
+      <p class="profile__description"> <%= @profile.description %> </p>
+    </div>
+    <div>
+      <h3 class="profile__tittle">Where am I from?</h3>
+      <p class="profile__city"> <%= @profile.city %>, <%= @profile.state %>, <%= @profile.country %> </p>
+    </div>
+    <div>
+      <h3 class="profile__tittle">Contact me</h3>
+      <p class="profile__contact"> <%= @profile.phone_num %> </p>
+      <p class="profile__contact"> <%= @user.email %> </p>
+    </div>
+  </div>
 </div>

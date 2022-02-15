@@ -1,19 +1,23 @@
-<%= link_to 'Back', profiles_path%>
-<%= render 'about' %>
-<% if current_user.id == @user.id %>
-  <%= link_to 'Edit', edit_profile_path(current_user.id)%>
-<% end %>
-<% if !@skills.empty? %>
-  <%= render 'skills' %>
-<% else %>
-  <% if current_user.id == @user.id %>
-    <h2><%= link_to "Add your first Skill #{ current_user.name }", new_skill_path(current_user.id)%> </h1>
-  <% end %>
-<% end %>
-<% if !@social_network.empty? %>
-  <%= render 'socialn' %>
-<% else %>
-  <% if current_user.id == @user.id %>
-    <h2><%= link_to "Add your Social network #{ current_user.name }", new_social_network_path(current_user.id)%> </h2>
-  <% end %>
-<% end %>
+<div class="container">
+  <%= link_to 'Back', profiles_path%>
+  <div class="profile">
+    <%= render 'about' %>
+    <% if current_user.id == @user.id %>
+      <%= link_to 'Edit', edit_profile_path(current_user.id)%>
+    <% end %>
+    <% if !@skills.empty? %>
+      <%= render 'skills' %>
+    <% else %>
+      <% if current_user.id == @user.id %>
+        <h2><%= link_to "Add your first Skill #{ current_user.name }", new_skill_path(current_user.id)%> </h1>
+      <% end %>
+    <% end %>
+    <% if !@social_network.empty? %>
+      <%= render 'socialn' %>
+    <% else %>
+      <% if current_user.id == @user.id %>
+        <h2><%= link_to "Add your Social network #{ current_user.name }", new_social_network_path(current_user.id)%> </h2>
+      <% end %>
+    <% end %>
+  </div>
+</div>
