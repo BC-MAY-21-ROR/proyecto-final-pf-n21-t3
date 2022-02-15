@@ -1,0 +1,24 @@
+.feed{
+  display: grid;
+  grid-template-columns: .50fr 1.50fr;
+  grid-gap: 0rem;
+  .user{
+    width: 16rem;
+    height: 16rem;
+    background-color: $feed_card;
+    margin-left: 15rem;
+    h4{
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 1.7rem;
+    }
+    h3{
+      @extend h4;
+      margin-top: 3rem;
+      font-size: 2.2rem;
+    }
+  }
+
+  
+}
+
