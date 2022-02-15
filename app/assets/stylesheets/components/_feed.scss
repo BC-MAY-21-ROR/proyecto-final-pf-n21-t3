@@ -1,54 +1,52 @@
 .feed{
   display: grid;
-  grid-template-columns: .50fr 1.50fr;
+  grid-template-columns: 1fr 4fr;
+  gap: 1rem;
 
   .user{
     background-color: $feed_card;
-    height: 16rem;
-    margin-left: 15rem;
-    width: 16rem;
+    padding: 1rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
 
-    h4{
-      font-size: 1.7rem;
-      margin-bottom: 1rem;
-      text-align: center;
+    &__img{
+      width: 100%;
     }
 
-    h3{
-      @extend h4;
-      font-size: 2.2rem;
-      margin-top: 3rem;
+    &__name{
+      margin: 0;
+      text-align: center;
+    }
+    &__skill{
+      @extend .user__name
+    }
+
+    a{
+      margin-top: 0.5rem;
+      color: $color_black;
+      text-decoration: none;
+    }
+    a:hover{
+      color: $color_white;
     }
   }
 
   .profile{
     background-color: $feed_card;
-    border-radius: 2rem;
     display: grid;
-    font-size: 1.7rem;
-    grid-template-columns: 1.25fr .75fr;
-    margin-bottom: 5rem;
-    margin-left: 5rem;
-    width: 80%;
 
     &__name{
-      margin-left: 2rem;
-      margin-top: 2rem;
-
-      h4{
-        font-size: 2.2rem;
-      }
+      
     }
 
     &__city{
-      margin: 2rem 2rem;
-      text-align: right;
+      
     }
 
     &__description{
-      margin-left: 2rem;
-      margin-top: 1rem;
+      
     }
   }
 }
-
