@@ -1,0 +1,26 @@
+<% if !@profiles.empty? %>
+  <% @profiles.each do |profile| %>
+    <div class="profile">
+      <% user = User.find_by(id: profile.user_id) %>
+      <% skill = Skill.find_by(user_id: user.id) %>
+      <div class="profile__top">
+        <%= image_tag 'profile', class: 'profile__img' %>
+        <div class="profile__info">
+          <div class="line">
+            <h4 class="profile__name" > <%= link_to user.name, profile_path(user.id)%> </h4>
+            <h5 class="profile__city" > <%= profile.city.capitalize %>, <%= profile.state.capitalize %>, <%= profile.country.capitalize %> </h5>
+          </div>
+          <div class="line">
+            <% if !skill.nil? %>
+              <h5 class="profile__skill" > <%= skill.name %> </h5>
+            <% end %>
+            <h5 class="profile__date"> <%=  user.birthday.strftime("%m-%d-%Y") %> </h5>
+          </div>
+        </div>
+      </div>
+      <p class="profile__description" > <%= profile.description %> </p>
+    </div>
+  <% end %>
+<% else %>
+  <h2>Users not found</h2>
+<% end %>

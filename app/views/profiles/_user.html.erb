@@ -1,0 +1,14 @@
+<div class="user">
+  <%= image_tag 'profile', class: 'user__img' %>
+  <% if @profile.nil? %>
+    <h3 class="user__name" > <%= link_to current_user.name, new_profile_path %> </h3>
+  <% else %>
+    <h3 class="user__name"> <%= link_to current_user.name, profile_path(current_user.id) %> </h3>
+    <% skill = Skill.find_by(user_id: current_user.id ) %>
+    <% if !skill.nil? %>
+      <h4 class="user__skill" > <%= skill.name %> </h4>
+    <% else %>
+      <h4 class="user__skill"> <%= link_to "Add skill", new_skill_path(current_user.id) %> </h4>
+    <% end %>
+  <% end %>
+</div>
