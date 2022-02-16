@@ -2,7 +2,10 @@
   <div class='profile__view'>
     <div>
       <%= image_tag "profile", class: "profile__img"%>
-      <p class="profile__age"> <%= @user.birthday.strftime("%m/%d/%Y") %> </p>
+      <div class="line--view">
+        <p class="profile__age"> <%= @user.gender %> </p>
+        <p class="profile__age"> <%= @user.birthday.strftime("%m/%d/%Y") %> </p>
+      </div>
     </div>
   </div>
   <div class="profile__info">

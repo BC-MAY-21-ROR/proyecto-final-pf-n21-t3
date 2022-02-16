@@ -1,18 +1,26 @@
 <div class="container">
-  <h1 class='skills__title'>Skills</h1>
+  <div class='line'>
+    <h1 class='skills__title'>Skills</h1>
+    <% if current_user.id == @user.id %>
+      <%= link_to new_skill_path(current_user.id) do%>
+        <%= image_tag 'new', class: 'logo'%>
+      <% end %>
+    <% end %>
+  </div>
 </div>
 <div class='skills__bg'>
   <div class="container">
-    <% @skills.each do |skill|%>
-      <div>
-        <p> <%= skill.name %>
-        <% if current_user.id == @user.id %>
-          <%= link_to 'X', skill_path(skill), method: :delete ,data: {confirm: "Are you sure ?"}%></p>
-        <% end %>
-      </div>
-    <% end %>
-    <% if current_user.id == @user.id %>
-      <%= link_to 'new', new_skill_path(current_user.id)%>
-    <% end %>
+    <div class='skills__container'>
+      <% @skills.each do |skill|%>
+        <div class='skills__item'>
+          <p class='skills__name'> <%= skill.name %></p>
+          <% if current_user.id == @user.id %>
+            <%= link_to skill_path(skill), method: :delete ,data: {confirm: "Are you sure ?"} do %>
+              <%= image_tag 'delete', class: 'skills__logo'%>
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

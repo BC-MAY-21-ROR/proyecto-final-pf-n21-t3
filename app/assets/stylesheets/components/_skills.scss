@@ -1,7 +1,7 @@
 .skills{
   &__title {
     color: $color_black;
-    margin: 1rem 0 0 0;
+    margin: 0;
   }
 
   &__line {
@@ -15,6 +15,7 @@
     @extend .skills__title;
     display: flex;
     justify-content: center;
+
     a {
       color: $color_black;
       text-decoration: none;
@@ -25,4 +26,58 @@
     }
   }
 
+  &__bg {
+    background-color: $modal_color;
+    padding: 1rem 0;
+  }
+
+  .line {
+    margin: 3rem 0 1rem 0;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .logo {
+    height: 4rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 2rem 0;
+    place-items: center;
+  }
+
+  @media (min-width:1000px ) {
+    &__container {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  @media (min-width:1300px ) {
+    &__container {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  &__item {
+    background-color: $tag;
+    padding: 1rem 1rem 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20rem 0 0 20rem;
+    width: 90%;
+  }
+
+  &__logo {
+    height: 2.5rem;
+  }
+
+  &__name {
+    margin: 0;
+    font-size: 2rem;
+  }
 }
