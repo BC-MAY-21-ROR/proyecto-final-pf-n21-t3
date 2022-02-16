@@ -2,18 +2,21 @@
   <%= link_to 'Back', profiles_path%>
   <div class="profile">
     <%= render 'about' %>
-    <% if !@skills.empty? %>
-      <%= render 'skills' %>
-    <% else %>
-      <% if current_user.id == @user.id %>
-        <h2><%= link_to "Add your first Skill #{ current_user.name }", new_skill_path(current_user.id)%> </h1>
+    <div class='skills'>
+      <% if !@skills.empty? %>
+        <%= render 'skills' %>
+      <% else %>
+        <% if current_user.id == @user.id %>
+          <h1 class='skills__title--first'><%= link_to "Add your first Skill", new_skill_path(current_user.id)%> </h1>
+          <div class='skills__line'></div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
     <% if !@social_network.empty? %>
       <%= render 'socialn' %>
     <% else %>
       <% if current_user.id == @user.id %>
-        <h2><%= link_to "Add your Social network #{ current_user.name }", new_social_network_path(current_user.id)%> </h2>
+        <h1><%= link_to "Add your Social network #{ current_user.name }", new_social_network_path(current_user.id)%> </h1>
       <% end %>
     <% end %>
   </div>
