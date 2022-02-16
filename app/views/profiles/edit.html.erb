@@ -1,4 +1,4 @@
-<%= link_to 'Back', profiles_path%>
+<%= link_to 'Back', profile_path(current_user.id) %>
 <h2> Create your profile <span><%= current_user.name%></span> </h2>
 <%= form_with(model: @profile, local:true) do |f|%>
   <div>
