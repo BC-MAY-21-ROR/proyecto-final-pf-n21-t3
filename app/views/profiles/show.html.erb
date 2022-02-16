@@ -2,9 +2,6 @@
   <%= link_to 'Back', profiles_path%>
   <div class="profile">
     <%= render 'about' %>
-    <% if current_user.id == @user.id %>
-      <%= link_to 'Edit', edit_profile_path(current_user.id)%>
-    <% end %>
     <% if !@skills.empty? %>
       <%= render 'skills' %>
     <% else %>

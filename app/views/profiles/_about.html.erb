@@ -1,22 +1,30 @@
 <div class="profile__top">
-  <div>
-    <%= image_tag "profile", class: "profile__img"%>
-    <p class="profile__age"> <%= @user.birthday.strftime("%m-%d-%Y") %> </p>
+  <div class='profile__view'>
+    <div>
+      <%= image_tag "profile", class: "profile__img"%>
+      <p class="profile__age"> <%= @user.birthday.strftime("%m/%d/%Y") %> </p>
+    </div>
   </div>
-  <div>
-    <h2 class="profile__name"> <%= @user.name %> </h2>
-    <div>
-      <h3 class="profile__tittle">Who Am I?</h3>
-      <p class="profile__description"> <%= @profile.description %> </p>
+  <div class="profile__info">
+    <div class="line">
+      <h1 class="profile__name"> <%= @user.name %> </h1>
+      <% if current_user.id == @user.id %>
+        <%= link_to edit_profile_path(current_user.id) do%>
+          <%= image_tag 'edit', class: 'logo'%>
+        <% end %>
+      <% end %>
     </div>
+    <h2 class="profile__tittle">Who Am I?</h2>
+    <p class="profile__description"> <%= @profile.description %> </p>
+    <h2 class="profile__tittle">Where am I from?</h2>
+    <p class="profile__city"> <%= @profile.city %>, <%= @profile.state %>, <%= @profile.country %> </p>
     <div>
-      <h3 class="profile__tittle">Where am I from?</h3>
-      <p class="profile__city"> <%= @profile.city %>, <%= @profile.state %>, <%= @profile.country %> </p>
+      <h2 class="profile__tittle">Contact me</h2>
+      <ul>
+        <li class="profile__contact"> <%= @profile.phone_num %> </li>
+        <li class="profile__contact"> <%= @user.email %> </li>
+      </ul>
     </div>
-    <div>
-      <h3 class="profile__tittle">Contact me</h3>
-      <p class="profile__contact"> <%= @profile.phone_num %> </p>
-      <p class="profile__contact"> <%= @user.email %> </p>
     </div>
   </div>
 </div>
