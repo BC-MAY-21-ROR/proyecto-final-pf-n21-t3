@@ -13,6 +13,7 @@
 
   &__title--first {
     @extend .skills__title;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
 

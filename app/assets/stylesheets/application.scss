@@ -5,6 +5,7 @@
 @import "./components/navbar";
 @import "./components/profile";
 @import "./components/skills";
+@import "./components/network";
 
 body {
   background-color: $background_color;
@@ -34,4 +35,8 @@ html {
 .back {
   height: 3rem;
   margin-bottom: 1rem;
+}
+
+.bg {
+  background-color: $background_color;
 }

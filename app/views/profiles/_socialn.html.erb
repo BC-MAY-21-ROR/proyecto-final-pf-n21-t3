@@ -1,4 +1,4 @@
-<h1>Social networks <%= @user.name %> </h1>
+<h1 class="networks__title">Social networks</h1>
 <% @social_network.each do |network| %>
   <div>
     <%= link_to network.network , network.url, target: "_blank" %>

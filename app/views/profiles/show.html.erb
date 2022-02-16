@@ -17,13 +17,16 @@
         <% end %>
       <% end %>
     </div>
-    <div class="container">
-      <% if !@social_network.empty? %>
-        <%= render 'socialn' %>
-      <% else %>
-        <% if current_user.id == @user.id %>
-          <h1><%= link_to "Add your Social network #{ current_user.name }", new_social_network_path(current_user.id)%> </h1>
+    <div class="networks">
+      <div class="container">
+        <% if !@social_network.empty? %>
+          <%= render 'socialn' %>
+        <% else %>
+          <% if current_user.id == @user.id %>
+            <h1 class="networks__title--first"><%= link_to "Add your Social network #{ current_user.name }", new_social_network_path(current_user.id)%> </h1>
+            <div class='networks__line'></div>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
     </div>
 </div>
