@@ -108,6 +108,6 @@
   }
 
   .search {
-    background-color: $search_card;
+    background-color: lighten($feed_card,12%);
   }
 }
