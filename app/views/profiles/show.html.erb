@@ -1,6 +1,8 @@
 <div class="profile">
   <div class="container">
-    <%= link_to 'Back', profiles_path%>
+    <%= link_to profiles_path do %>
+      <%= image_tag 'back', class: "back"%>
+    <% end %>
     <%= render 'about' %>
   </div>
     <div class='skills'>
