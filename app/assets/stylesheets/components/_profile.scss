@@ -72,4 +72,8 @@
       height: 3.1rem;
     }
   }
+
+  &__title {
+    @extend .margin-0;
+  }
 }
