@@ -3,13 +3,10 @@
 @import "./components/login";
 @import "./components/signup";
 @import "./components/navbar";
-<<<<<<< HEAD
 @import "./components/profile";
 @import "./components/skills";
 @import "./components/network";
-=======
 @import "./components/feed";
->>>>>>> 6c8b2c6a53e1f906ade8d9fe9f977c790c9acfe9
 
 body {
   background-color: $background_color;
@@ -36,15 +33,13 @@ html {
   width: 95%;
 }
 
-<<<<<<< HEAD
 .back {
   height: 3rem;
   margin-bottom: 1rem;
 }
 
 .bg {
-=======
-.main{
->>>>>>> 6c8b2c6a53e1f906ade8d9fe9f977c790c9acfe9
-  background-color: $background_color;
+  .main{
+    background-color: $background_color;
+  }
 }
