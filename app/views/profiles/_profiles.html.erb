@@ -1,6 +1,10 @@
 <% if !@profiles.empty? %>
   <% @profiles.each do |profile| %>
-    <div class="profile">
+    <% if @type=="index"%>
+      <div class="profile index">
+    <% elsif @type=="search" %>
+      <div class="profile search">
+    <%end%>
       <% user = User.find_by(id: profile.user_id) %>
       <% skill = Skill.find_by(user_id: user.id) %>
       <div class="profile__top">

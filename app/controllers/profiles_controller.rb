@@ -7,6 +7,7 @@ class ProfilesController < ApplicationController
   end
 
   def index
+    @type = "index"
     name = params[:name]
     option = params[:option]
     @profile = Profile.find_by(user_id: current_user.id)
@@ -14,6 +15,7 @@ class ProfilesController < ApplicationController
       @profiles = Profile.where.not(user_id: current_user.id).where(visible: true)
     else
       id = find(name, option)
+      @type = "search"
       @profiles = Profile.where.not(user_id: current_user.id).where(user_id: id)
     end
     render 'index'
