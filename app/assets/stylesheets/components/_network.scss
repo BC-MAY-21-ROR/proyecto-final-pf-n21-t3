@@ -22,12 +22,20 @@
     width: 100%;
     height: 0.1rem;
     background-color: $color_black;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem
+  }
+
+  .line {
+    margin: 3rem 0 4rem 0;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
   }
 
   &__container {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 
   .network {
@@ -53,6 +61,7 @@
 
     .Twitter {
       background-color: #0fa6e8;
+      padding: 0 1rem;
     }
 
     .LinkedIn {
