@@ -66,19 +66,19 @@
     height: 2.5rem;
   }
 
+  .line {
+    align-items: center;
+    display: flex;
+    gap: 3rem;
+    margin: 3rem 0 2rem 0;
+  }
+
+  .logo {
+    height: 4rem;
+  }
+
   &__name {
     font-size: 2rem;
     margin: 0;
   }
-}
-
-.line {
-  align-items: center;
-  display: flex;
-  gap: 3rem;
-  margin: 3rem 0 2rem 0;
-}
-
-.logo {
-  height: 4rem;
 }
