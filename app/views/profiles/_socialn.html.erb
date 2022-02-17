@@ -2,13 +2,15 @@
 <div class='networks__container'>
   <% @social_network.each do |network| %>
     <div class='network'>
-    <div class="network__bg <%= network.network %>">
-    </div>
-      <%= link_to network.url, target: "_blank" do %>
-        <%= image_tag network.network %>
-      <% end %>
+      <div class="network__bg <%= network.network %>">
+        <%= link_to network.url, target: "_blank" do %>
+          <%= image_tag network.network, class: "network__logo" %>
+        <% end %>
+      </div>
       <% if current_user.id == @user.id %>
-        <%= link_to 'X', social_network_path(network), method: :delete ,data: {confirm: "Are you sure ?"}%>
+        <%= link_to social_network_path(network), method: :delete ,data: {confirm: "Are you sure ?"} do%>
+          <%= image_tag 'delete', class: 'network__delete' %>
+        <% end %>
       <% end %>
     </div>
   <% end %>

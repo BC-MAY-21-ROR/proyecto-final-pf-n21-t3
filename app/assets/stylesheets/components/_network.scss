@@ -1,7 +1,7 @@
 .networks {
   &__title {
     color: $color_black;
-    margin: 0;
+    margin: 2rem 0;
   }
 
   &__title--first {
@@ -23,5 +23,48 @@
     height: 0.1rem;
     background-color: $color_black;
     margin-bottom: 2rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+  }
+
+  .network {
+    display: flex;
+    justify-content: center;
+    align-items: initial;
+
+    &__bg{
+      width: 11.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .Facebook {
+      background-color: $hover;
+    }
+
+    .Instagram {
+      background-color: $hover;
+    }
+
+    .Twitter {
+      background-color: $hover;
+    }
+
+    .LinkedIn {
+      background-color: $hover;
+    }
+
+    &__logo {
+      height: 11.5rem;
+    }
+
+    &__delete {
+      width: 2rem;
+      margin-top: -3rem;
+    }
   }
 }
