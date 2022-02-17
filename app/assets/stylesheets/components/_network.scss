@@ -54,20 +54,24 @@
     }
 
     .Facebook {
-      background-color: #3a5795;
+      background-color: #6e72fc;
+      background-image: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);
     }
 
     .Instagram {
-      background-color: #894699;
+      background-color: #7fd82b;
+      background-image: linear-gradient(319deg, #7fd82b 0%, #ef4063 37%, #e557c6 100%);
     }
 
     .Twitter {
-      background-color: #0fa6e8;
+      background-color: #045de9;
+      background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
       padding: 0 1rem;
     }
 
     .LinkedIn {
-      background-color: #1b7cb3;
+      background-color: #29539b;
+      background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
     }
 
     &__logo {
