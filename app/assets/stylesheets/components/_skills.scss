@@ -32,17 +32,6 @@
     padding: 1rem 0;
   }
 
-  .line {
-    margin: 3rem 0 1rem 0;
-    display: flex;
-    gap: 3rem;
-    align-items: center;
-  }
-
-  .logo {
-    height: 4rem;
-  }
-
   &__container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -81,4 +70,15 @@
     margin: 0;
     font-size: 2rem;
   }
+}
+
+.line {
+  margin: 3rem 0 2rem 0;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.logo {
+  height: 4rem;
 }
