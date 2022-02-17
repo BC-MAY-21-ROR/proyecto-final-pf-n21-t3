@@ -40,22 +40,23 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      border-radius: 1.5rem;
     }
 
     .Facebook {
-      background-color: $hover;
+      background-color: #3a5795;
     }
 
     .Instagram {
-      background-color: $hover;
+      background-color: #894699;
     }
 
     .Twitter {
-      background-color: $hover;
+      background-color: #0fa6e8;
     }
 
     .LinkedIn {
-      background-color: $hover;
+      background-color: #1b7cb3;
     }
 
     &__logo {
