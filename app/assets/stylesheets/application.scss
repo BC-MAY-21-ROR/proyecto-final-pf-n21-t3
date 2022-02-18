@@ -42,8 +42,3 @@ html {
 .main {
   background-color: $background_color;
 }
-
-.form-cont {
-  @extend .cont;
-  max-width: 65rem;
-}

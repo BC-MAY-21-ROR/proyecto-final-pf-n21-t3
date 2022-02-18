@@ -1,10 +1,44 @@
-.form__title{
-  text-align: center;
-}
 
-.form {
-  background-color: $modal_color;
-  padding: 1rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+.newForm {
+  margin: 2rem auto;
+  max-width: 65rem;
+  width: 95%;
+
+  &__title{
+    text-align: center;
+  }
+
+  &__bg {
+    background-color: $modal_color;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  &__gap {
+    display: grid;
+    gap: 1rem;
+  }
+
+  &__col {
+    display: grid;
+    gap: 1rem;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  &__visible {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  &__location {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+  }
 }
