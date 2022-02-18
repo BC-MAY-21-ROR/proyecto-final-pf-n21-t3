@@ -1,6 +1,8 @@
-<%= link_to profile_path(current_user.id) do %>
-  <%= image_tag 'back', class: "back"%>
-<% end %>
+<div class="cont">
+  <%= link_to profile_path(current_user.id) do %>
+    <%= image_tag 'back', class: "back"%>
+  <% end %>
+</div>
 <h2> Create your profile <span><%= current_user.name%></span> </h2>
 <%= form_with scope: :profile, url: profiles_path, local:true do |f|%>
   <div>

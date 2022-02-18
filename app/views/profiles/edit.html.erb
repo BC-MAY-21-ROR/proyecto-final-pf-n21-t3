@@ -1,40 +1,44 @@
-<%= link_to profile_path(current_user.id) do %>
-  <%= image_tag 'back', class: "back"%>
-<% end %>
-<h2> Create your profile <span><%= current_user.name%></span> </h2>
-<%= form_with(model: @profile, local:true) do |f|%>
-  <div>
-    <%= f.label 'About me' %>
-    <%= f.text_area :description %>
-  </div>
-  <div>
-    <%= f.label :city %>
-    <%= f.text_field :city %>
-  </div>
-  <div>
-    <%= f.label :state %>
-    <%= f.text_field :state %>
-  </div>
-  <div>
-    <%= f.label :country %>
-    <%= f.text_field :country %>
-  </div>
-  <div>
-    <%= f.label :phone_num %>
-    <%= f.text_field :phone_num %>
-  </div>
-  <div>
-    <%= f.label :visible %>
-    <%= f.select(:visible, options_for_select([["True",1],["False",0]])) %>
-  </div>
-  <%= f.submit %>
-<% end %>
-
-<% if @profile.errors.any? %>
-  <h3> The following errors prevented the Profile from being Updated</h3>
-  <ul>
-  <% @profile.errors.full_messages.each do |msg|%>
-    <li><span><%= msg %></span></li>
+<div class="cont">
+  <%= link_to profile_path(current_user.id) do %>
+    <%= image_tag 'back', class: "back"%>
   <% end %>
-  </ul>
-<% end %>
+</div>
+<div class="form-cont">
+  <h2> Create your profile <span><%= current_user.name%></span> </h2>
+  <%= form_with(model: @profile, local:true) do |f|%>
+    <div>
+      <%= f.label 'About me' %>
+      <%= f.text_area :description %>
+    </div>
+    <div>
+      <%= f.label :city %>
+      <%= f.text_field :city %>
+    </div>
+    <div>
+      <%= f.label :state %>
+      <%= f.text_field :state %>
+    </div>
+    <div>
+      <%= f.label :country %>
+      <%= f.text_field :country %>
+    </div>
+    <div>
+      <%= f.label :phone_num %>
+      <%= f.text_field :phone_num %>
+    </div>
+    <div>
+      <%= f.label :visible %>
+      <%= f.select(:visible, options_for_select([["True",1],["False",0]])) %>
+    </div>
+    <%= f.submit %>
+  <% end %>
+
+  <% if @profile.errors.any? %>
+    <h3> The following errors prevented the Profile from being Updated</h3>
+    <ul>
+    <% @profile.errors.full_messages.each do |msg|%>
+      <li><span><%= msg %></span></li>
+    <% end %>
+    </ul>
+  <% end %>
+</div>
