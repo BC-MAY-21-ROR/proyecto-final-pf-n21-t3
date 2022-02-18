@@ -1,0 +1,80 @@
+.profile  {
+  &__top {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 2.5fr;
+  }
+
+  &__view {
+    align-items: center;
+    display: grid;
+    justify-content: center;
+
+    .line--view{
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+  }
+
+  @media (min-width:1200px ) {
+    &__top {
+      grid-template-columns: 1fr 4fr;
+    }
+  }
+
+  &__info {
+    background-color: $feed_card;
+    border-radius: 1.5rem;
+    display: grid;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__age {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  &__description {
+    font-size: 1.2rem;
+    text-align: justify;
+    @extend .margin-0;
+  }
+
+  &__city {
+    @extend .profile__description;
+  }
+
+  &__name {
+    font-size: 2.6rem;
+    @extend .margin-0;
+  }
+
+  &__contact {
+    @extend .profile__description;
+  }
+
+  .margin-0 {
+    margin: 0;
+  }
+
+  .line {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      height: 3.1rem;
+    }
+  }
+
+  &__title {
+    @extend .margin-0;
+  }
+}

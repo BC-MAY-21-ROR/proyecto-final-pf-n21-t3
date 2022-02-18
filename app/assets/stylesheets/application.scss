@@ -3,6 +3,9 @@
 @import "./components/login";
 @import "./components/signup";
 @import "./components/navbar";
+@import "./components/profile";
+@import "./components/skills";
+@import "./components/network";
 @import "./components/feed";
 
 body {
@@ -24,12 +27,18 @@ html {
   box-sizing: inherit;
 }
 
-.container {
+.cont {
   margin: 0 auto;
-  max-width: 140rem;
+  max-width: 120rem;
   width: 95%;
 }
 
-.main{
+.back {
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+
+.main {
   background-color: $background_color;
 }

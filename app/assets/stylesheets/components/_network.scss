@@ -1,0 +1,86 @@
+.networks {
+  &__title {
+    color: $color_black;
+    margin: 0;
+  }
+
+  &__title--first {
+    @extend .networks__title;
+    margin-top: 4rem;
+    text-align: center;
+
+    a {
+      color: $color_black;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $hover;
+    }
+  }
+
+  &__line {
+    background-color: $color_black;
+    height: 0.1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .line {
+    align-items: center;
+    display: flex;
+    gap: 3rem;
+    margin: 3rem 0 4rem 0;
+  }
+
+  &__container {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+  }
+
+  .network {
+    align-items: initial;
+    display: flex;
+    justify-content: center;
+
+    &__bg {
+      align-items: center;
+      border-radius: 1.5rem;
+      display: flex;
+      justify-content: center;
+      width: 11.5rem;
+    }
+
+    .Facebook {
+      background-color: #6e72fc;
+      background-image: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);
+    }
+
+    .Instagram {
+      background-color: #7fd82b;
+      background-image: linear-gradient(319deg, #7fd82b 0%, #ef4063 37%, #e557c6 100%);
+    }
+
+    .Twitter {
+      background-color: #045de9;
+      background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+      padding: 0 1rem;
+    }
+
+    .LinkedIn {
+      background-color: #29539b;
+      background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+    }
+
+    &__logo {
+      height: 11.5rem;
+    }
+
+    &__delete {
+      margin-top: -3rem;
+      width: 2rem;
+    }
+  }
+}

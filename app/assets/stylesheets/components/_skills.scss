@@ -1,0 +1,84 @@
+.skills {
+  &__title {
+    color: $color_black;
+    margin: 0;
+  }
+
+  &__line {
+    background-color: $color_black;
+    height: 0.1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  &__title--first {
+    @extend .skills__title;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+
+    a {
+      color: $color_black;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $hover;
+    }
+  }
+
+  &__bg {
+    background-color: $modal_color;
+    padding: 1rem 0;
+  }
+
+  &__container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem 0;
+    place-items: center;
+  }
+
+  @media (min-width:1000px ) {
+    &__container {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  @media (min-width:1300px ) {
+    &__container {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  &__item {
+    align-items: center;
+    background-color: $tag;
+    border-radius: 20rem 0 0 20rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem 1rem 2rem;
+    width: 90%;
+  }
+
+  &__logo {
+    height: 2.5rem;
+  }
+
+  .line {
+    align-items: center;
+    display: flex;
+    gap: 3rem;
+    margin: 3rem 0 2rem 0;
+  }
+
+  .logo {
+    height: 4rem;
+  }
+
+  &__name {
+    font-size: 2rem;
+    margin: 0;
+  }
+}

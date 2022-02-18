@@ -1,12 +1,24 @@
-<h1>Social networks <%= @user.name %> </h1>
-<% @social_network.each do |network| %>
-  <div>
-    <%= link_to network.network , network.url, target: "_blank" %>
-    <% if current_user.id == @user.id %>
-      <%= link_to 'X', social_network_path(network), method: :delete ,data: {confirm: "Are you sure ?"}%>
+<div class='line'>
+  <h1 class="networks__title">Social networks</h1>
+  <% if current_user.id == @user.id %>
+    <%= link_to new_social_network_path(current_user.id) do%>
+      <%= image_tag 'new', class: 'logo'%>
     <% end %>
-  </div>
-<% end %>
-<% if current_user.id == @user.id %>
-  <%= link_to 'add', new_social_network_path(current_user.id)%>
-<% end %>
+  <% end %>
+</div>
+<div class='networks__container'>
+  <% @social_network.each do |network| %>
+    <div class='network'>
+      <div class="network__bg <%= network.network %>">
+        <%= link_to network.url, target: "_blank" do %>
+          <%= image_tag network.network, class: "network__logo" %>
+        <% end %>
+      </div>
+      <% if current_user.id == @user.id %>
+        <%= link_to social_network_path(network), method: :delete ,data: {confirm: "Are you sure ?"} do%>
+          <%= image_tag 'delete', class: 'network__delete' %>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
