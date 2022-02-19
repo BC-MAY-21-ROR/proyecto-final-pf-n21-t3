@@ -37,8 +37,8 @@
   <% end %>
 
   <% if @profile.errors.any? %>
-    <h3> The following errors prevented the Profile from being Updated</h3>
-    <ul>
+    <h2 class="newForm__title"> The following errors prevented the Profile from being updated</h2>
+    <ul class="newForm__errors">
     <% @profile.errors.full_messages.each do |msg|%>
       <li><span><%= msg %></span></li>
     <% end %>
