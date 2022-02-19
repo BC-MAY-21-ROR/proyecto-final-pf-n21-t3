@@ -16,14 +16,19 @@
   &__input {
     font-size: 1.5rem;
     width: 100%;
+    background-color: $background_color;
+    border-style: none;
+    padding: 0.5rem;
   }
 
   &__button {
-    font-size: 1.5rem;
+    @extend .newForm__input;
+    background-color: $button_color;
+    box-shadow: 2.5px 2.5px 5px 0px rgba(0,0,0,0.75);
   }
 
   select {
-    font-size: 1.5rem;
+    @extend .newForm__input;
   }
 
   textarea{
