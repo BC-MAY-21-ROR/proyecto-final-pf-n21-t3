@@ -63,4 +63,25 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 0.5rem;
   }
+
+  &__errors {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    list-style: none;
+    li {
+      font-size: 1.5rem;
+      span {
+        margin-left: 1.5rem;
+      }
+    }
+  }
+
+  &__errors li::before{
+    content: "\2022";
+    color: red;
+    font-weight: bold;
+    display: inline-block;
+    width: 1rem;
+  }
 }
