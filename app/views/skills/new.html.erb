@@ -1,6 +1,8 @@
-<%= link_to profile_path(current_user.id) do %>
-  <%= image_tag 'back', class: "back"%>
-<% end %>
+<div class="cont">
+  <%= link_to profile_path(current_user.id) do %>
+    <%= image_tag 'back', class: "back"%>
+  <% end %>
+</div>
 <div class="newForm">
   <h1 class="newForm__title"> Add a new Skill <span><%= current_user.name%></span> </h1>
   <%= form_with scope: :skill, url: skills_path, local:true do |f|%>
