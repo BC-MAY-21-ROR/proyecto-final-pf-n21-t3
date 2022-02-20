@@ -58,6 +58,11 @@
     gap: 1rem;
   }
 
+  &__row--short {
+    @extend .newForm__row;
+    grid-template-columns: 1fr 3fr;
+  }
+
   &__location {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
