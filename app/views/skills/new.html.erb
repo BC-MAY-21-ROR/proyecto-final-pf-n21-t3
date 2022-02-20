@@ -17,8 +17,8 @@
   <% end %>
 
   <% if @skill.errors.any? %>
-    <h3> The following errors prevented the Skill from being saved</h3>
-    <ul>
+    <h2 class="newForm__title"> The following errors prevented the Skill from being saved</h2>
+    <ul class="newForm__errors">
     <% @skill.errors.full_messages.each do |msg|%>
       <li><span><%= msg %></span></li>
     <% end %>
