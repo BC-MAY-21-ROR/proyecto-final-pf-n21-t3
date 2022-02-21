@@ -1,40 +1,47 @@
-<%= link_to profile_path(current_user.id) do %>
-  <%= image_tag 'back', class: "back"%>
-<% end %>
-<h2> Create your profile <span><%= current_user.name%></span> </h2>
-<%= form_with scope: :profile, url: profiles_path, local:true do |f|%>
-  <div>
-    <%= f.label 'About me' %>
-    <%= f.text_area :description %>
-  </div>
-  <div>
-    <%= f.label :city %>
-    <%= f.text_field :city %>
-  </div>
-  <div>
-    <%= f.label :state %>
-    <%= f.text_field :state %>
-  </div>
-  <div>
-    <%= f.label :country %>
-    <%= f.text_field :country %>
-  </div>
-  <div>
-    <%= f.label :phone_num %>
-    <%= f.text_field :phone_num %>
-  </div>
-  <div>
-    <%= f.label :visible %>
-    <%= f.select(:visible, options_for_select([["True",1],["False",0]])) %>
-  </div>
-  <%= f.submit %>
-<% end %>
-
-<% if @profile.errors.any? %>
-  <h3> The following errors prevented the Profile from being saved</h3>
-  <ul>
-  <% @profile.errors.full_messages.each do |msg|%>
-    <li><span><%= msg %></span></li>
+<div class="cont">
+  <%= link_to profile_path(current_user.id) do %>
+    <%= image_tag 'back', class: "back"%>
   <% end %>
-  </ul>
-<% end %>
+</div>
+<div class="newForm">
+  <h1 class="newForm__title"> Create your profile <span><%= current_user.name%></span> </h1>
+  <%= form_with scope: :profile, url: profiles_path, local:true do |f|%>
+    <div class="newForm__bg newForm__gap">
+      <div class="newForm__col">
+        <%= f.label 'About me', class: "newForm__label" %>
+        <%= f.text_area :description, class: "newForm__input" %>
+      </div>
+      <div class="newForm__location">
+        <%= f.label :city , class: "newForm__label"%>
+        <%= f.label :state, class: "newForm__label" %>
+        <%= f.label :country, class: "newForm__label" %>
+        <%= f.text_field :city, class: "newForm__input" %>
+        <%= f.text_field :state, class: "newForm__input" %>
+        <%= f.text_field :country, class: "newForm__input" %>
+      </div>
+      <div class="newForm__col">
+        <div class="newForm__row">
+          <%= f.label :phone_num, class: "newForm__label" %>
+          <%= f.label :visible, class: "newForm__label" %>
+        </div>
+        <div class="newForm__row">
+          <%= f.text_field :phone_num, class: "newForm__input" %>
+          <%= f.select(:visible, options_for_select([["True",1],["False",0]])) %>
+        </div>
+      </div>
+      <div class="newForm__row">
+        <div></div>
+        <%= f.submit "Create profile", class:"newForm__button"%>
+      </div>
+    </div>
+  <% end %>
+
+  <% if @profile.errors.any? %>
+    <h2 class="newForm__title"> The following errors prevented the Profile from being saved</h2>
+    <ul class="newForm__errors">
+    <% @profile.errors.full_messages.each do |msg|%>
+      <li><span><%= msg %></span></li>
+    <% end %>
+    </ul>
+  <% end %>
+</div>

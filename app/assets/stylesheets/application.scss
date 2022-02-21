@@ -7,6 +7,7 @@
 @import "./components/skills";
 @import "./components/network";
 @import "./components/feed";
+@import "./components/forms";
 
 body {
   background-color: $background_color;
@@ -37,7 +38,6 @@ html {
   height: 3rem;
   margin-bottom: 1rem;
 }
-
 
 .main {
   background-color: $background_color;

@@ -4,10 +4,10 @@ class SocialNetworksController < ApplicationController
   end
 
   def create
-    hash = social_network_params
+    hash = params.require(:social_network).permit(:url, :network)
     hash[:user_id] = current_user.id
-    @validate = SocialNetwork.find_by(hash.slice(:network, :user_id))
-    if @validate.nil?
+    @social_network = SocialNetwork.find_by(hash.slice(:network, :user_id))
+    if @social_network.nil?
       @social_network = SocialNetwork.new(hash)
       if @social_network.save
         redirect_to profile_path(@social_network.user_id)
@@ -15,7 +15,7 @@ class SocialNetworksController < ApplicationController
         render 'new'
       end
     else
-      if @validate.update(hash)
+      if @social_network.update(hash)
         redirect_to profile_path(hash[:user_id])
       else
         render 'new'
