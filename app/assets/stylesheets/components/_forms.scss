@@ -1,10 +1,9 @@
-
 .newForm {
   margin: 2rem auto;
   max-width: 65rem;
   width: 95%;
 
-  &__title{
+  &__title {
     text-align: center;
   }
 
@@ -14,11 +13,11 @@
   }
 
   &__input {
-    font-size: 1.5rem;
-    width: 100%;
     background-color: $background_color;
     border-style: none;
+    font-size: 1.5rem;
     padding: 0.5rem;
+    width: 100%;
   }
 
   &__button {
@@ -31,15 +30,15 @@
     @extend .newForm__input;
   }
 
-  textarea{
+  textarea {
     height: 12rem;
   }
 
   &__bg {
     background-color: $modal_color;
     border-radius: 1.5rem;
-    padding: 1.5rem;
     margin: 2rem 0;
+    padding: 1.5rem;
   }
 
   &__gap {
@@ -54,8 +53,8 @@
 
   &__row {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 1rem;
+    grid-template-columns: 1fr 1fr;
   }
 
   &__row--short {
@@ -65,28 +64,30 @@
 
   &__location {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     gap: 0.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   &__errors {
     display: grid;
     gap: 0.5rem;
-    margin-top: 1rem;
     list-style: none;
+    margin-top: 1rem;
+
     li {
       font-size: 1.5rem;
+
       span {
         margin-left: 1.5rem;
       }
     }
   }
 
-  &__errors li::before{
-    content: "\2022";
+  &__errors li::before {
     color: red;
-    font-weight: bold;
+    content: "\2022";
     display: inline-block;
+    font-weight: bold;
     width: 1rem;
   }
 }
