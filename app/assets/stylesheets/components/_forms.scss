@@ -63,34 +63,37 @@
     gap: 0.5rem;
     grid-template-columns: 1fr 1fr 1fr;
   }
-}
 
-.newForm__title {
-  text-align: center;
-}
+  &__title {
+    text-align: center;
+  }
 
-.newForm__errors {
-  display: grid;
-  gap: 0.5rem;
-  list-style: none;
-  margin-top: 1rem;
+  &__errors {
+    display: grid;
+    gap: 0.5rem;
+    list-style: none;
+    margin-top: 1rem;
 
-  li {
-    font-size: 1.5rem;
+    li {
+      font-size: 1.5rem;
 
-    span {
-      margin-left: 1.5rem;
+      span {
+        margin-left: 1.5rem;
+      }
+    }
+
+    & li::before {
+      color: red;
+      content: "\2022";
+      display: inline-block;
+      font-weight: bold;
+      width: 1rem;
     }
   }
 }
 
-.newForm__errors li::before {
-  color: red;
-  content: "\2022";
-  display: inline-block;
-  font-weight: bold;
-  width: 1rem;
-}
+
+
 
 .margin-top {
   margin-top: 4rem;
