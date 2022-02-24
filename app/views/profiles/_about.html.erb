@@ -1,7 +1,7 @@
 <div class="profile__top">
   <div class='profile__view'>
     <div>
-      <% if !@user.picture.nil? %>
+      <% if @user.picture.attached? %>
         <%= image_tag @user.picture, class: "profile__img"%>
       <% else %>
         <%= image_tag "profile", class: "profile__img"%>
@@ -10,7 +10,9 @@
         <p class="profile__age"> <%= @user.gender %> </p>
         <p class="profile__age"> <%= @user.birthday.strftime("%m/%d/%Y") %> </p>
       </div>
-      <%= link_to "Edit", edit_user_registration_path%>
+      <% if current_user.id == @user.id %>
+        <%= link_to "Edit", edit_user_registration_path%>
+      <% end %>
     </div>
   </div>
   <div class="profile__info">
