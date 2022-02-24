@@ -42,3 +42,7 @@ html {
 .main {
   background-color: $background_color;
 }
+
+.grid-column {
+  grid-column: 2/3;
+}
