@@ -1,16 +1,22 @@
-<h2>Forgot your password?</h2>
+<div class="cont">
+  <%= link_to new_user_session_path do %>
+    <%= image_tag 'back', class: "back margin-top"%>
+  <% end %>
+</div>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+<div class="newForm">
+  <h1 class="newForm__title">Forgot your password?</h1>
+
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <div class="newForm__bg newForm__gap">
+      <div class="newForm__row--short">
+        <%= f.label :email, class: "newForm__label" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "newForm__input" %>
+      </div>
+      <div class="newForm__row">
+        <%= f.submit "Send me reset password instructions", class:"newForm__button grid-column" %>
+      </div>
+    </div>
+  <% end %>
   <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

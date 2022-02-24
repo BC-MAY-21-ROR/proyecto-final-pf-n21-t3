@@ -3,10 +3,6 @@
   max-width: 65rem;
   width: 95%;
 
-  &__title {
-    text-align: center;
-  }
-
   &__label {
     color: $color_white;
     font-size: 1.8rem;
@@ -68,6 +64,10 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  &__title {
+    text-align: center;
+  }
+
   &__errors {
     display: grid;
     gap: 0.5rem;
@@ -81,13 +81,17 @@
         margin-left: 1.5rem;
       }
     }
-  }
 
-  &__errors li::before {
-    color: red;
-    content: "\2022";
-    display: inline-block;
-    font-weight: bold;
-    width: 1rem;
+    & li::before {
+      color: red;
+      content: "\2022";
+      display: inline-block;
+      font-weight: bold;
+      width: 1rem;
+    }
   }
+}
+
+.margin-top {
+  margin-top: 2rem;
 }
