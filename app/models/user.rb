@@ -5,4 +5,5 @@ class User < ApplicationRecord
   has_one :profile, dependent: :destroy
   has_one :social_network, dependent: :destroy
   has_many :skill, dependent: :destroy
+  has_one_attached :picture
 end
