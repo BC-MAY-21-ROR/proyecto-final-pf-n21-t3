@@ -10,9 +10,11 @@
         <p class="profile__age"> <%= @user.gender %> </p>
         <p class="profile__age"> <%= @user.birthday.strftime("%m/%d/%Y") %> </p>
       </div>
-      <% if current_user.id == @user.id %>
-        <%= link_to "Edit", edit_user_registration_path%>
-      <% end %>
+        <% if current_user.id == @user.id %>
+          <%= link_to edit_user_registration_path do%>
+            <h5 class="profile__edit">Edit profile</h5>
+          <% end %>
+        <% end %>
     </div>
   </div>
   <div class="profile__info">
