@@ -8,7 +8,11 @@
       <% user = User.find_by(id: profile.user_id) %>
       <% skill = Skill.find_by(user_id: user.id) %>
       <div class="profile__top">
-        <%= image_tag 'profile', class: 'profile__img' %>
+        <% if user.picture.attached? %>
+          <%= image_tag user.picture, class: "profile__img"%>
+        <% else %>
+          <%= image_tag "profile", class: "profile__img"%>
+        <% end %>
         <div class="profile__info">
           <div class="line">
             <h4 class="profile__name" > <%= link_to user.name, profile_path(user.id)%> </h4>

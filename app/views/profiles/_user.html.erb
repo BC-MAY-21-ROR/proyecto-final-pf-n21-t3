@@ -1,5 +1,9 @@
 <div class="user">
-  <%= image_tag 'profile', class: 'user__img' %>
+  <% if current_user.picture.attached? %>
+    <%= image_tag current_user.picture, class: "user__img"%>
+  <% else %>
+    <%= image_tag "profile", class: "user__img"%>
+  <% end %>
   <% if @profile.nil? %>
     <h3 class="user__name" > <%= link_to current_user.name, new_profile_path %> </h3>
   <% else %>

@@ -9,6 +9,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :picture %><br />
+    <%= f.file_field :picture, accept:"image/png,image/jpeg" %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
