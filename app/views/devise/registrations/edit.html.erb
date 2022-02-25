@@ -65,7 +65,12 @@
     </div>
   <% end %>
 
-  <h3 class="newForm__title">Cancel my account</h3>
+<div class="newForm__flex">
+  <h2 class="newForm__title">Cancel my account</h2>
+  <h4 class="newForm__title">Unhappy? </h4>
+  <%= link_to registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete do %>
+    <button class="newForm__button newForm__button--delete">Cancel my account</button>
+  <% end %>
+</div>
 
-  <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 </div>
