@@ -24,9 +24,9 @@
 
   &__button--delete {
     background-color: #9C1C1C;
-    padding: 0.5rem 2rem;
     border-radius: 1.5rem;
     color: white;
+    padding: 0.5rem 2rem;
   }
 
   select {
@@ -55,11 +55,11 @@
   }
 
   &__flex {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 1rem;
+    justify-content: center;
   }
 
   &__row {
