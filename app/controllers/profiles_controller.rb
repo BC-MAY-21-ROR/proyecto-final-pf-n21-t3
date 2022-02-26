@@ -23,10 +23,10 @@ class ProfilesController < ApplicationController
 
   def find(name, option)
     if option == 'name'
-      names = User.where("name LIKE :prefix", prefix: "%#{name}%")
+      names = User.where("name ILIKE :prefix", prefix: "%#{name}%")
       id = names.map(&:id)
     else
-      skills = Skill.where("name LIKE :prefix", prefix: "%#{name}%")
+      skills = Skill.where("name ILIKE :prefix", prefix: "%#{name}%")
       id = skills.map(&:user_id)
     end
     id
