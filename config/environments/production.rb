@@ -63,7 +63,7 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "proyecto_final_pf_n21_t3_production"
 
   config.action_mailer.perform_caching = false
-
+  config.action_mailer.default_url_options = { :host => 'smtp.sendgrid.net'} 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
@@ -75,7 +75,7 @@ Rails.application.configure do
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
-  # Log disallowed deprecations.
+  # Log disallowed deprecations
   config.active_support.disallowed_deprecation = :log
 
   # Tell Active Support which deprecation messages to disallow.
