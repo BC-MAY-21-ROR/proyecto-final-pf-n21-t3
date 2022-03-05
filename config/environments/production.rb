@@ -63,7 +63,18 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "proyecto_final_pf_n21_t3_production"
 
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options = { :host => 'smtp.sendgrid.net'} 
+  config.action_mailer.default_url_options = { :host => 'seeker-social-network.herokuapp.com'} 
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: "smtp.sendgrid.net",
+    domain: "sendgrid.com",
+    port: 587,
+    user_name: ENV['SENDGRID_USERNAME'],
+    password: ENV['SENDGRID_PASSWORD'],
+    authentication: 'plain',
+    enable_starttls_auto: true
+  }
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
