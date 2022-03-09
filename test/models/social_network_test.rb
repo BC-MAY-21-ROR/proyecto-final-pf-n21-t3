@@ -25,4 +25,9 @@ class SocialNetworkTest < ActiveSupport::TestCase
     @network.url = "Facebook/perfil"
     assert_not @network.valid?
   end
+
+  test "Social Network should not be valid because the user doesn't exits" do
+    @network.user_id = 5
+    assert_not @network.valid?
+  end
 end
