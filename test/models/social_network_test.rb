@@ -1,7 +1,7 @@
 require "test_helper"
 
 class SocialNetworkTest < ActiveSupport::TestCase
-  def setup
+  setup do
     @user = User.create(
       email:"dayala0@hotmail.com", name:"Derek", birthday:"01-01-2001",
       gender:"male", password:"dere2023", password_confirmation:"dere2023"
